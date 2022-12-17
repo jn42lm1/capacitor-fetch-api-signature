@@ -1,0 +1,30 @@
+{
+  "name": "capacitor-app",
+  "version": "1.0.0",
+  "description": "Demo repo to show how the Capacitor HTTP Fetch API patch is not implemented to support all function signature of fetch",
+  "main": "index.js",
+  "keywords": [
+    "capacitor",
+    "mobile"
+  ],
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "android": "vite build && npx cap run android",
+    "ios": "vite build && npx cap run ios"
+  },
+  "dependencies": {
+    "@capacitor/android": "^4.6.1",
+    "@capacitor/camera": "latest",
+    "@capacitor/core": "latest",
+    "@capacitor/ios": "^4.6.1",
+    "@capacitor/splash-screen": "latest"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "latest",
+    "vite": "^2.9.13"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,14 @@
+{
+  "appId": "com.example.app",
+  "appName": "Fetch API Demo",
+  "bundledWebRuntime": false,
+  "webDir": "dist",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    },
+    "CapacitorHttp": {
+      "enabled": true
+    }
+  }
+}
