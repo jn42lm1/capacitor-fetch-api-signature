@@ -187,7 +187,6 @@ window.customElements.define(
 
         this.shadowRoot.querySelector('#demo4-output').innerHTML = 'Loading...';
 
-
         // Patch fetch the right way.
         window.fetch = async (
           resource,
@@ -207,12 +206,18 @@ window.customElements.define(
           }
       
           try {
+            // Parse data from the request body.
+            let requestData;
+
+            if (request.body) {
+              requestData = await new Response(request.body).json();
+            }
       
             // intercept request & pass to the bridge
             const nativeResponse = await CapacitorHttp.request({
               url: request.url,
               method: request.method,
-              data: request.body,
+              data: requestData,
               headers: Object.fromEntries(request.headers)
             });
       
